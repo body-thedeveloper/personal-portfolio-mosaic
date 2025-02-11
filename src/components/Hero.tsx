@@ -7,25 +7,40 @@ const Hero = () => {
       id="home"
       className="min-h-screen flex items-center justify-center relative overflow-hidden"
     >
-      <div className="absolute inset-0 w-full h-full bg-gradient-to-b from-secondary/50 to-transparent" />
       <div className="container mx-auto px-6 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="max-w-4xl"
+          className="max-w-5xl mx-auto"
         >
-          <p className="text-lg mb-4 text-muted-foreground">Hi, I'm</p>
-          <h1 className="text-6xl md:text-8xl font-display font-bold mb-6">
-            Your Name
-          </h1>
-          <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed">
-            A creative developer focused on crafting beautiful and functional digital
-            experiences.
-          </p>
+          <motion.h1 
+            className="text-7xl md:text-9xl font-display font-bold mb-8 leading-tight"
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2, duration: 0.8 }}
+          >
+            Digital Product
+            <br />
+            Designer
+          </motion.h1>
+          <motion.p 
+            className="text-xl md:text-2xl text-muted-foreground leading-relaxed max-w-2xl"
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.4, duration: 0.8 }}
+          >
+            Crafting immersive digital experiences through thoughtful design
+            and creative development.
+          </motion.p>
         </motion.div>
       </div>
-      <div className="absolute bottom-12 left-1/2 -translate-x-1/2">
+      <motion.div 
+        className="absolute bottom-12 left-1/2 -translate-x-1/2"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.8, duration: 0.8 }}
+      >
         <motion.div
           animate={{ y: [0, 10, 0] }}
           transition={{ repeat: Infinity, duration: 2 }}
@@ -33,7 +48,7 @@ const Hero = () => {
         >
           <div className="w-1 h-2 bg-foreground rounded-full mt-2" />
         </motion.div>
-      </div>
+      </motion.div>
     </section>
   );
 };

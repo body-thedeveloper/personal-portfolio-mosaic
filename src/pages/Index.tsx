@@ -6,7 +6,7 @@ import About from "@/components/About";
 
 const Index = () => {
   return (
-    <main className="relative">
+    <main className="relative bg-background">
       <CustomCursor />
       <Navigation />
       <Hero />
