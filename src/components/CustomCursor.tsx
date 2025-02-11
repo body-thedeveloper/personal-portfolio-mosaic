@@ -7,9 +7,11 @@ const CustomCursor = () => {
 
   useEffect(() => {
     const updateCursor = (e: MouseEvent) => {
-      setPosition({ x: e.clientX, y: e.clientY });
-      const target = e.target as HTMLElement;
-      setIsPointer(window.getComputedStyle(target).cursor === "pointer");
+      requestAnimationFrame(() => {
+        setPosition({ x: e.clientX, y: e.clientY });
+        const target = e.target as HTMLElement;
+        setIsPointer(window.getComputedStyle(target).cursor === "pointer");
+      });
     };
 
     window.addEventListener("mousemove", updateCursor);
