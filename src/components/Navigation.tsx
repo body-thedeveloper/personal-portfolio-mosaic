@@ -30,7 +30,7 @@ const Navigation = () => {
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >
-          f
+          a f
           <span className="logo-dot" />
         </motion.a>
         <div className="space-x-12">
