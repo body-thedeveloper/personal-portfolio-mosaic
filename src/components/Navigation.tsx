@@ -26,11 +26,12 @@ const Navigation = () => {
       <div className="max-w-screen-xl mx-auto px-6 flex justify-between items-center">
         <motion.a
           href="#home"
-          className="text-xl font-display font-medium tracking-tight"
+          className="text-2xl font-display font-medium tracking-tight logo"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >
-          João
+          f
+          <span className="logo-dot" />
         </motion.a>
         <div className="space-x-12">
           <motion.a
