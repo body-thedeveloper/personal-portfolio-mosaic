@@ -96,7 +96,16 @@ const Navigation = () => {
             animate="open"
             exit="closed"
             variants={menuVariants}
-            className="fixed inset-0 bg-background z-40 flex items-center justify-center"
+            style={{ 
+              position: 'fixed',
+              top: 0,
+              bottom: 0,
+              left: 0,
+              right: 0,
+              height: '100vh',
+              width: '100%'
+            }}
+            className="bg-background z-40 flex items-center justify-center"
           >
             <div className="flex flex-col items-center space-y-8">
               {["Work", "About"].map((item, i) => (
