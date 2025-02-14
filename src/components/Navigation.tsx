@@ -1,12 +1,10 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { useIsMobile } from "@/hooks/use-mobile";
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const isMobile = useIsMobile();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -74,42 +72,21 @@ const Navigation = () => {
           a f
           <span className="logo-dot" />
         </motion.a>
-        {!isMobile ? (
-          <div className="space-x-12">
-            <motion.a
-              href="#work"
-              className="nav-link"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              Work
-            </motion.a>
-            <motion.a
-              href="#about"
-              className="nav-link"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              About
-            </motion.a>
-          </div>
-        ) : (
-          <button
-            onClick={toggleMenu}
-            className="relative z-50 w-10 h-10 flex flex-col justify-center items-center"
-          >
-            <span
-              className={`w-6 h-0.5 bg-foreground transition-all duration-300 ${
-                isMenuOpen ? "rotate-45 translate-y-0.5" : "-translate-y-1"
-              }`}
-            />
-            <span
-              className={`w-6 h-0.5 bg-foreground transition-all duration-300 ${
-                isMenuOpen ? "-rotate-45" : "translate-y-1"
-              }`}
-            />
-          </button>
-        )}
+        <button
+          onClick={toggleMenu}
+          className="relative z-50 w-10 h-10 flex flex-col justify-center items-center"
+        >
+          <span
+            className={`w-6 h-0.5 bg-foreground transition-all duration-300 ${
+              isMenuOpen ? "rotate-45 translate-y-0.5" : "-translate-y-1"
+            }`}
+          />
+          <span
+            className={`w-6 h-0.5 bg-foreground transition-all duration-300 ${
+              isMenuOpen ? "-rotate-45" : "translate-y-1"
+            }`}
+          />
+        </button>
       </div>
 
       <AnimatePresence>
