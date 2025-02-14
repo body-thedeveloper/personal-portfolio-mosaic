@@ -38,12 +38,21 @@ const Work = () => {
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-display font-medium tracking-tight mb-16">
             Selected Work
           </h2>
-          <div className="grid gap-24">
+          <motion.div 
+            className="grid gap-24"
+            variants={{
+              hover: {
+                gap: "8rem"
+              }
+            }}
+            transition={{ duration: 0.5, ease: [0.45, 0, 0.55, 1] }}
+          >
             {projects.map((project) => (
               <motion.div
                 key={project.id}
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
+                whileHover="hover"
                 transition={{ duration: 1, ease: [0.45, 0, 0.55, 1] }}
                 viewport={{ once: true, margin: "-100px" }}
                 className="group relative"
@@ -92,7 +101,7 @@ const Work = () => {
                 </motion.div>
               </motion.div>
             ))}
-          </div>
+          </motion.div>
         </motion.div>
       </div>
     </section>
