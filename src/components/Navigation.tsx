@@ -53,6 +53,8 @@ const Navigation = () => {
     }),
   };
 
+  const menuItems = ["Home", "Work", "About", "Blog", "Contact"];
+
   return (
     <motion.nav
       initial={{ y: -100, opacity: 0 }}
@@ -108,7 +110,7 @@ const Navigation = () => {
             className="bg-background z-40 flex items-center justify-center"
           >
             <div className="flex flex-col items-center space-y-8">
-              {["Work", "About"].map((item, i) => (
+              {menuItems.map((item, i) => (
                 <motion.a
                   key={item}
                   href={`#${item.toLowerCase()}`}
