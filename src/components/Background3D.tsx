@@ -146,7 +146,7 @@ const Background3D = () => {
     };
   }, []);
 
-  return <div ref={containerRef} className="absolute inset-0 -z-10 bg-black" />;
+  return <div ref={containerRef} className="absolute inset-0 -z-10 bg-background" />;
 };
 
 export default Background3D;
