@@ -1,14 +1,12 @@
 
 import { motion } from "framer-motion";
-import Background3D from "./Background3D";
 
 const Hero = () => {
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center justify-center relative overflow-hidden bg-background"
+      className="min-h-screen flex items-center justify-center relative overflow-hidden"
     >
-      <Background3D />
       <div className="max-w-screen-xl mx-auto px-6 relative z-10">
         <motion.div
           initial={{ opacity: 0 }}
